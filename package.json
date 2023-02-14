@@ -1,6 +1,6 @@
 {
   "name": "tods-storybook",
-  "version": "0.1.1",
+  "version": "0.0.3",
   "private": false,
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -8,14 +8,16 @@
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0"
   },
+  "files": ["dist", "lib"],
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
+    "build": "next build",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build-lib": "rollup -c"
+    "build-lib": "rollup -c",
+    "clean": "rimraf dist"
   },
   "dependencies": {
     "@next/font": "13.1.6",

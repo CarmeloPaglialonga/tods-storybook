@@ -42,14 +42,10 @@ export default [
 		    'process.browser': true,
         "process.env.NODE_ENV": JSON.stringify("development")
       }),
-      /* postcss({
+       postcss({
         plugins: [],
         minimize: true,
-      }), */
-      /*babel({
-        exclude: 'node_modules/**',
-        presets: ['@babel/preset-react']
-      }),*/
+      }),
       babel({
         babelHelpers: 'bundled',
         exclude: 'node_modules/**',
@@ -60,6 +56,6 @@ export default [
       commonjs(),
       terser(),
     ],
-   // external: Object.keys(packageJson.peerDependencies);
+   external: Object.keys(packageJson.peerDependencies),
   }
 ];
