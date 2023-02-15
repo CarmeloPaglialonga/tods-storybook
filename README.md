@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - `npm run dev` - run the development server 
 - `npm install` - install project dependencies
 - `npm run storybook` - start local development environment.
-- `npm run build` - build package into `dist/` folder
+- `npm run build-package` - build package into `lib/` folder
 - `npm publish` - publish your package to [npm](npmjs.com).
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -13,10 +13,9 @@ Open [http://localhost:6006] (http://localhost:6006) for see the storybook
 
 ## Features
 - [Babel](https://babeljs.io/) for modern JavaScript and JSX transpilation
-- [Rollup](https://rollupjs.org/) for build
-- Bundle generated in `cjs` and `esm` formats
+- [Webpack](https://webpack.js.org/) for build
 - [Storybook](https://storybook.js.org/) for local development
 
 ### License
-MIT license, Copyright (c) Juan Pablo Mejia Duque. For more information see `LICENSE`.
+Copyright (c) Carmelo Paglialonga.
 

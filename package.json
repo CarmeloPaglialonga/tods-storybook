@@ -1,6 +1,6 @@
 {
   "name": "tods-storybook",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "main": "dist/index.js",
   "files": [
@@ -14,7 +14,6 @@
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build-lib": "rollup -c",
     "clean": "rimraf lib",
     "build-package": "webpack --config ./webpack.config.js --mode=production",
     "prepare": "npm run build-package"
@@ -24,16 +23,11 @@
     "next": "13.1.6",
     "node-sass": "^8.0.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "rollup-plugin-postcss-modules": "^2.1.1"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-react": "^7.18.6",
-    "@rollup/plugin-babel": "^6.0.3",
-    "@rollup/plugin-commonjs": "^24.0.1",
-    "@rollup/plugin-node-resolve": "^15.0.1",
-    "@rollup/plugin-replace": "^5.0.2",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
@@ -45,13 +39,6 @@
     "babel-loader": "^8.3.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "eslint-plugin-storybook": "^0.6.10",
-    "rollup": "^2.79.1",
-    "rollup-plugin-filesize": "^9.1.2",
-    "rollup-plugin-generate-package-json": "^3.2.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-scss": "^3.0.0",
-    "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.58.1",
     "sass-loader": "^13.2.0",
     "webpack": "^5.75.0",

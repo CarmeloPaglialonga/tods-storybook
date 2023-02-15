@@ -31,5 +31,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-#build
-/dist/
+#build npm package
+/lib/
