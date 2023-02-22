@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './common.scss';
 
 export const Slideshow = ({ }) => (
   <p className="pippo">

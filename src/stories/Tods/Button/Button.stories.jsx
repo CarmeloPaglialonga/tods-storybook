@@ -1,6 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from 'react';
-
 import { Button } from '../../../components/Tods/Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

@@ -1,5 +1,5 @@
-$color-primary: #000;
+$primary-color: #64ff00;
 
-.pippo {
-    color: $color-primary;
+:export {
+  primaryColor: $primary-color;
 }

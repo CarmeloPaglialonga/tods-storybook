@@ -1,10 +1,15 @@
+const path = require('path')
+
 module.exports = {
     entry: './src/index.js',
     output: {
       path: `${__dirname}/lib`,
-      filename: 'index.js',
+      filename: '[name].js',
       library: 'tods-storybook',
       libraryTarget: 'umd',
+    },
+    resolve: {
+      extensions: [".js", ".jsx", ".css", ".scss"]
     },
     module: {
         rules: [
@@ -14,29 +19,21 @@ module.exports = {
             use: ['babel-loader'],
           },
           {
-            test: /\.scss$/,
-            exclude: /node_modules/,
+            test: /\.(s*)css$/,        
             use: [
-                {
-                    loader: 'style-loader',
-                },
-                {
-                    loader: 'css-loader',
-                    options: {
-                        sourceMap: true,
-                    },
-                },
-                {
-                    loader: 'sass-loader',
-                    options: {
-                        sourceMap: true,
-                    },
-                },
-            ],
-        },
+              "style-loader",
+              {
+                loader: "file-loader",
+                options: {
+                  name: "css/[name].css"
+                }
+              },
+              "sass-loader"
+            ]
+          },
         ],
       },
       externals: {
         'react': 'commonjs react' 
       }
-  };
+  }; 
