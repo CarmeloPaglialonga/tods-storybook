@@ -7,6 +7,7 @@ module.exports = {
       filename: '[name].js',
       library: 'tods-storybook',
       libraryTarget: 'umd',
+      
     },
     resolve: {
       extensions: [".js", ".jsx", ".css", ".scss"]
@@ -19,7 +20,7 @@ module.exports = {
             use: ['babel-loader'],
           },
           {
-            test: /\.(s*)css$/,        
+            test: /\.(sass|css|scss)$/,           
             use: [
               "style-loader",
               {
@@ -28,7 +29,8 @@ module.exports = {
                   name: "css/[name].css"
                 }
               },
-              "sass-loader"
+              "css-loader",
+              "sass-loader",
             ]
           },
         ],

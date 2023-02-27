@@ -1,3 +1,80 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+
+  "extends": [
+    "airbnb"
+  ],
+
+  "env": {
+    "browser": true,
+    "node": true
+  },
+
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+
+  "settings": {
+    "propWrapperFunctions": ["forbidExtraProps", "exact", "Object.freeze"],
+    "import/resolver": {
+      "babel-module": {
+        "root": ["./src"]
+      }
+    }
+  },
+
+  "rules": {
+    "indent": "off",
+    "max-len": ["error", 300],
+    "arrow-body-style": ["off"],
+    "semi": ["error", "always", { "omitLastInOneLineBlock": true}],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prefer-stateless-function": [0],
+    "react/jsx-indent": ["error", 4],
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/forbid-foreign-prop-types": 0,
+    "import/no-extraneous-dependencies": [0],
+    "import/extensions": ["off", "never"],
+    "no-new": 0,
+    "class-methods-use-this": ["off"],
+    "no-underscore-dangle": [0, { "allowAfterSuper": true }],
+    "react/no-danger": 0,
+    "no-static-element-interactions": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "linebreak-style": 0,
+    "import/prefer-default-export": "off",
+    "react/forbid-prop-types": 0,
+    "global-require":0,
+    "no-inline-comments": "error",
+    "jsx-a11y/html-has-lang": 0,
+    "jsx-a11y/label-has-associated-control": [ "error", {
+      "required": {
+        "some": [ "nesting", "id"  ]
+      }
+    }],
+    "jsx-a11y/label-has-for": [ "error", {
+      "required": {
+        "some": [ "nesting", "id"  ]
+      }
+    }],
+    "object-curly-newline":0,
+    "prefer-destructuring": ["error", {"object": true, "array": false}],
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/interactive-supports-focus": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-tabindex": "off",
+    "react/static-property-placement": ["error", "static getter"],
+    "arrow-parens": [2, "as-needed", { "requireForBlockBody": true }],
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-fragments": "off",
+    "react/jsx-curly-newline": "off"
+  }
 }

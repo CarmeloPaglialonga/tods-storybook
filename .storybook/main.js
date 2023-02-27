@@ -1,16 +1,30 @@
+const custom = require('../webpack.config.js');
+
 module.exports = {
-  "stories": [
+  stories: [
     "../src/**/*.stories.mdx",
-    "../src/**/*.stories.@(js|jsx)"
+    "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
-  "addons": [
+  webpackFinal: (config) => {
+    return {
+      ...config,
+      module: {
+        rules: custom.module.rules,
+      },
+      resolve: {
+        ...config.resolve,
+        ...custom.resolve,
+      }
+    };
+  },
+  addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@storybook/preset-scss",
   ],
-  "framework": "@storybook/react",
-  "core": {
-    "builder": "@storybook/builder-webpack5"
-  },
-  addons: [ ] 
-}
+  framework: "@storybook/react",
+  core: {
+    builder: "@storybook/builder-webpack5"
+  }
+};

@@ -1,8 +1,8 @@
-const Buttons = require("./components/Tods/Button"); // and rewrite in Buttons.js
-const Slideshow = require("./components/Common/Slideshow"); // and rewrite in Message.js
-import './styles/globals.scss';
+const Buttons = require("./components/Tods/Button");
+const Slideshow = require("./components/Common/Slideshow");
+import './styles/sass/globals.scss';
 
 module.exports = { 
   Buttons, 
-  Slideshow 
+  Slideshow,
 };

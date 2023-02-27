@@ -1,0 +1,90 @@
+// VARIABLES
+
+// COLORS
+$blue: #16253f !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #E00000 !default;
+$orange: #FF8000 !default;
+$yellow: #ff8000 !default;
+$warning: #F29B26 !default;
+$green: #00bc28 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$gray-93: #EDEDED !default;
+$gray-disabled-bg: #E8E8E8 !default;
+$gray-disabled-color: #919191 !default;
+$azul-gray: #fafafa !default;
+$azul-gray-2: #F7F7F7 !default;
+$yellow-gray: #96956e !default;
+$yellow-gray-light: #eae8e3 !default;
+$gray-light: #d5d2c8 !default;
+$gray: #666666 !default; // #999999
+$gray-ultralight: #999999 !default;
+$gray-medium: #666666 !default;
+$sale: #E00000 !default;
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+
+$xs: 376px;
+$sm-max: 767px;
+$sm: 768px;
+$md: 768.1px;
+$md-max: 991px;
+$lg: 992px;
+$lg-max: 1024px;
+$xl: 1246px;
+$wide: 1600px;
+$tablet-exclude: 1181px;
+
+$navbar-height-web: 80px;
+$navbar-height-mobile: 50px;
+$header-alert: 26px;
+
+$navbar-height-web-alert: 80px + $header-alert;
+$navbar-height-mobile-alert: 50px + $header-alert;
+
+$menu-full-height: calc(100vh - 106px);
+
+$BannerFullVideo-h-sm: calc(100vh - 106px);
+$BannerFullVideo-h-lg: calc(100vh - 106px);
+$BannerFullVideo-lg: calc(100vh - 80px);
+
+$card-h-sm: 460px;
+$card-h-md: 460px;
+$card-h-lg: 500px;
+$card-h-xl: 720px;
+$card-h-wide: 820px;
+
+$card-hero-sm: calc(460px * 2);
+$card-hero-md: calc(460px * 2);
+$card-hero-lg: calc(500px * 2);
+$card-hero-xl: calc(720px * 2);
+$card-hero-wide: calc(820px * 2);
+
+$submit-btn-max-width: 310px;
+
+$product-image-ratio: 127.78%;
+
+$sizeguide-modal-header-height: 28px;
