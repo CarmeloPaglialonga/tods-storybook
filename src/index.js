@@ -1,8 +1,5 @@
-const Buttons = require("./components/Tods/Button");
-const Slideshow = require("./components/Common/Slideshow");
-import './styles/sass/globals.scss';
+export * from "./components/Button";
+//export * from "./components/Article";
+//export * from "./components/ResponsiveImageEditorial";
+//export * from "./components/Slideshow";
 
-module.exports = { 
-  Buttons, 
-  Slideshow,
-};

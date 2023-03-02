@@ -7,9 +7,6 @@ const nextConfig = {
     webpack5: false,
   },
   reactStrictMode: true,
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
 }
 
 module.exports = nextConfig
