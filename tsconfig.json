@@ -3,10 +3,10 @@
     "outDir": "dist",
     "module": "esnext",
     "target": "es5",
-    "lib": ["es6", "dom", "es2016", "es2017"],
+    "lib": ["es5", "es6", "dom", "es2016", "es2017"],
     "jsx": "react",
     "declaration": true,
-    "declarationDir": "dist",
+    "declarationDir": "dist/components",
     "moduleResolution": "node",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -18,7 +18,6 @@
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
   },
-  "include": ["src", "placeholder.ts"],
-  "exclude": ["node_modules", "lib", "dist"],
-  "files": ["placeholder.ts"]
+  "include": ["sr/**/*", "placeholder.ts"],
+  "exclude": ["node_modules", "**/*.stories.js"],
 }

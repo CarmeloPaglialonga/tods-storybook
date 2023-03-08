@@ -1,39 +1,52 @@
 import babel from "@rollup/plugin-babel";
 import resolve from "@rollup/plugin-node-resolve";
-import postcss from 'rollup-plugin-postcss'
+import postcss from 'rollup-plugin-postcss';
+import commonjs from 'rollup-plugin-commonjs';
 import { terser } from "rollup-plugin-terser";
-import typescript from "rollup-plugin-typescript2";
-import styles from 'rollup-plugin-styles';
+import typescript from "rollup-plugin-typescript2"
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import stringHash from 'string-hash';
-import {camelCase} from 'lodash';
 import del from 'rollup-plugin-delete';
+//import scss from "rollup-plugin-scss";
+const packageJson = require('./package.json');
+//const path = require('path')
+
+
 export default [
   {
     input: "./src/index.js",
+//    preserveModules: true,
+  /*  output: [ {
+ 
+         dir: 'dist',
+        format: 'es',
+        preserveModulesRoot: './src',
+        preserveModules: true,
+      },
+    ], */
     output: [
       {
-        file: "dist/index.js",
-        format: "cjs",
+        file: packageJson.main,
+        format: 'cjs',
+        sourcemap: true,
       },
       {
-        file: "dist/index.es.js",
-        format: "es",
-        exports: "named",
-      },
-      {
-        file: "dist/index.d.ts",
-        format: "es",
-        exports: "named",
-      },
-    ],
+       file: packageJson.module,
+       format: 'esm',
+       sourcemap: true,
+     },
+     {
+      dir: 'dist',
+      format: 'es',
+      preserveModules: true,
+    },
+  ],
     plugins: [
         del({ targets: 'dist/*' }),
         peerDepsExternal({
           includeDependencies: true,
         }),
-        styles({
-          mode: ['extract', './styles.css'],
+       /*  styles({
+          mode: ['extract', 'dist/styles.css'],
           modules: {
             generateScopedName: (name, filename, css) => {
               if (filename.includes('module')) {
@@ -47,21 +60,24 @@ export default [
           url: {
             publicPath: './assets/',
           },
-        }),
+        }), */
       typescript({
         typescript: require("typescript"),
-      }),
-      postcss({
-        plugins: [],
-        minimize: true,
       }),
       babel({
         exclude: "node_modules/**",
         presets: ["@babel/preset-react"],
+        babelHelpers: 'bundled',
       }),
       resolve(),
+      postcss({
+        extract: false,
+        modules: true,
+        use: ['sass']
+     }),
+      commonjs(),
       terser(),
     ],
-    external: ['react', 'react-dom', 'prop-types', 'styled-components'],
+    external: Object.keys(packageJson.peerDependencies),
   },
 ];
